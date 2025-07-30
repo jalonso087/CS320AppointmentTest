@@ -38,7 +38,7 @@ public class Appointment {
         return appointmentDate;
     }
 
-    public String description() {
+    public String getDescription() {
         return description;
     }
 
