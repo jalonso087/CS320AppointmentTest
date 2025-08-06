@@ -16,20 +16,35 @@ public class AppointmentTest {
         assertEquals("1", appointment.getAppointmentId());
     }
 
-    //verify null description throws exception
+    //R3 = verify null description throws exception
     @Test
     void testAppointmentDescription() {
         assertThrows(IllegalArgumentException.class, () -> {
-            new Appointment("2", null, "Descrip.");
+            new Appointment("2", new Date(), null);
         });
     }
 
-    //verify incorrect data type for appointmentDate throws exception
+    //R3 = verify description length > 50 throws exception
+    @Test
+    void testAppointmentDescriptionLength() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Appointment("3", new Date(), "123456789012345678901234567890123456789012345678901");
+        });
+    }
+
+    //R2 = verify null appointmentDate throws exception
     @Test
     void testAppointmentDate() {
         assertThrows(IllegalArgumentException.class, () -> {
-            new Appointment("123456789012", new Date(), "Describe");
+            new Appointment("123456789012", null, "Describe");
         });
+    }
+
+    //R2 = verify date cannot be in the past
+    @Test
+    void testAppointmentDatePast() {
+        Appointment appt = new Appointment("5", new Date(), "Date in the Past");
+        assertEquals(new Date(), appt.getAppointmentDate());
     }
 
 }
