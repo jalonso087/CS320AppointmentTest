@@ -1,3 +1,8 @@
+//Author Name: Javier Alonso
+//Date: 8/5/25
+//Course ID: CS320
+//Description: Appointment class with constructor, getters, and setters.
+
 import java.util.Date;
 
 public class Appointment {

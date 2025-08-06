@@ -1,3 +1,9 @@
+//Author Name: Javier Alonso
+//Date: 8/5/25
+//Course ID: CS320
+//Description: Appointment service class with ArrayList as container for appointments and
+//  methods for appointment modifications
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;

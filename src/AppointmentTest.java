@@ -1,3 +1,8 @@
+//Author Name: Javier Alonso
+//Date: 8/5/25
+//Course ID: CS320
+//Description: Unit tests for the appointment class.
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Date;
