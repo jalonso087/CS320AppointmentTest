@@ -16,6 +16,15 @@ public class AppointmentTest {
         assertEquals("1", appointment.getAppointmentId());
     }
 
+    //R1 verify appointment must not be null
+    @Test
+    void testAppointmentNull() {
+        Appointment appt1 = new Appointment("1", new Date(), "1.");
+        assertThrows(IllegalArgumentException.class, () -> {
+            Appointment appt2 = new Appointment(null, new Date(), "2");
+        });
+    }
+
     //R3 = verify null description throws exception
     @Test
     void testAppointmentDescription() {
